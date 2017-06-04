@@ -1,4 +1,6 @@
 ## Middlesign
+[![Build Status](https://api.travis-ci.org/stefanoj3/middlesign.png?branch=master)](https://travis-ci.org/stefanoj3/middlesign)
+
 Signed request in golang made easy.
 
 I needed to implement signed requests in a personal project and decided to make a library out of it.
