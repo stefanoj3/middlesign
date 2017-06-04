@@ -6,9 +6,10 @@ import (
 	"time"
 )
 
-func NewSignedRequestMiddleware(nextHandler http.Handler, errorHandler http.Handler, config *MiddleSignConfig) http.Handler {
+// NewSignedRequestMiddleware creates the handler with the given configuration
+func NewSignedRequestMiddleware(nextHandler http.Handler, errorHandler http.Handler, config MiddleSignConfig) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		if isRequestValid(r, config) {
+		if isRequestValid(r, &config) {
 			nextHandler.ServeHTTP(w, r)
 		} else {
 			errorHandler.ServeHTTP(w, r)

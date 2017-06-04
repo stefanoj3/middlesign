@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-var middlesignConfig *middlesign.MiddleSignConfig
+var middlesignConfig middlesign.MiddleSignConfig
 
 func init() {
 	middlesignConfig = middlesign.DefaultConfig("my_awesome_secret")

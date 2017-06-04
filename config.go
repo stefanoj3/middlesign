@@ -1,6 +1,6 @@
 package middlesign
 
-// MiddleSignConfig is the middlesign configuration
+// MiddleSignConfig represents the middlesign configuration
 type MiddleSignConfig struct {
 	// TimestampKey is the key the the validator will read searching for the timestamp in the query parameters of the request
 	TimestampKey string
@@ -16,10 +16,10 @@ type MiddleSignConfig struct {
 }
 
 // DefaultConfig returns a configuration with default values, only the secret must be defined by the user
-func DefaultConfig(secret string) *MiddleSignConfig {
-	return &MiddleSignConfig{
+func DefaultConfig(secret string) MiddleSignConfig {
+	return MiddleSignConfig{
 		TimestampKey:    "t",
-		TimestampFormat: TimeFormatISO8601,
+		TimestampFormat: TimeFormatRFC3339,
 		SignatureKey:    "sig",
 		Threshold:       10,
 		Secret:          secret,

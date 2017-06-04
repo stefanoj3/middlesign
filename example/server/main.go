@@ -6,6 +6,8 @@ import (
 	"net/http"
 )
 
+// This is just an example on how to use the library
+
 func myErrorHandler(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusUnauthorized)
 }

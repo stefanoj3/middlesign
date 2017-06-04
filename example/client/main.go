@@ -1,12 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"github.com/stefanoj3/middlesign"
-	"log"
 	"net/http"
+	"log"
+	"github.com/stefanoj3/middlesign"
 	"time"
+	"fmt"
 )
+
+// This is just an example on how to use the library
 
 func main() {
 	url := "http://localhost:8000/"
