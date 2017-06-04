@@ -69,7 +69,7 @@ func TestMiddlewareShouldAllowOnlyValidRequests(t *testing.T) {
 			t.Errorf(
 				"Expected %d http code, got %d [scenario: %s]",
 				test.expectedHttpCode,
-				resp,
+				resp.Code,
 				scenario,
 			)
 		}
